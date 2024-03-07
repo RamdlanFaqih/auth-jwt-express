@@ -13,8 +13,8 @@ const verifyToken = require("../middlewares/staticAuth");
 
 router
   .get("/users", verifyToken,  getAllUsers)
-  .get("/user", verifyToken,  getUser)
-  .patch("/user", verifyToken, update)
+  .get("/user/profile", verifyToken,  getUser)
+  .patch("/user/update", verifyToken, update)
   .post("/register", register)
   .post("/login", login)
 
